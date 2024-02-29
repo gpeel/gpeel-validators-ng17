@@ -99,6 +99,48 @@
           }
         }
       }
+    },
+    "@gpeel/validators": {
+      "projectType": "library",
+      "root": "projects/gpeel/validators",
+      "sourceRoot": "projects/gpeel/validators/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/gpeel/validators/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/gpeel/validators/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/gpeel/validators/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/gpeel/validators/tsconfig.spec.json",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ]
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "projects/gpeel/validators/**/*.ts",
+              "projects/gpeel/validators/**/*.html"
+            ]
+          }
+        }
+      }
     }
   },
   "cli": {

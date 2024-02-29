@@ -9,8 +9,8 @@ Here is the addtional steps used to install the library into this project.
 https://angular.io/guide/file-structure
 https://angular.io/guide/creating-libraries
 
-            ng generate library @gpeel/my-validators
-            ng build @gpeel/my-validators
+            ng generate library @gpeel/validators
+            ng build @gpeel/validators
 
 For multiple project
 
@@ -38,7 +38,6 @@ tsconfig paths to tell the build system where to find the library.
   "compilerOptions": {
     "paths": {
       "@gpeel/my-validators": [
-        "dist/gpeel/my-validators/gpeel-my-validators",
         "dist/gpeel/my-validators"
       ]
     }
