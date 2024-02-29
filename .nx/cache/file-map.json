@@ -10,10 +10,13 @@
     "@angular/platform-browser": "^17.2.0",
     "@angular/platform-browser-dynamic": "^17.2.0",
     "@angular/router": "^17.2.0",
-    "cpx": "^1.5.0",
+    "@gpeel/perftools": "^17.0.1",
+    "@gpeel/plog": "^17.1.1",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.3",
+    "bump-cli": "^1.1.3",
+    "cpx": "^1.5.0",
     "@angular-devkit/build-angular": "^17.2.2",
     "@angular-eslint/builder": "17.2.1",
     "@angular-eslint/eslint-plugin": "17.2.1",
@@ -35,9 +38,14 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
+    "ng-packagr": "^17.2.0",
     "typescript": "~5.3.2"
   },
-  "pathMappings": {},
+  "pathMappings": {
+    "@gpeel/validators": [
+      "projects/gpeel/my-validators/src/public-api.ts"
+    ]
+  },
   "nxJsonPlugins": [],
   "fileMap": {
     "projectFileMap": {},
@@ -71,6 +79,10 @@
         "hash": "4915708981707541147"
       },
       {
+        "file": "READMEs/README-adding-project-demo-perftools-hardcoded.md",
+        "hash": "6623193562424231420"
+      },
+      {
         "file": "READMEs/README-install-bootstrap.md",
         "hash": "10612321728762693734"
       },
@@ -80,7 +92,7 @@
       },
       {
         "file": "READMEs/README-install-library.md",
-        "hash": "1670637298886215902"
+        "hash": "17222374688814222938"
       },
       {
         "file": "READMEs/README-install.md",
@@ -88,15 +100,467 @@
       },
       {
         "file": "angular.json",
-        "hash": "5422180893502477483"
+        "hash": "8302945328072020749"
       },
       {
         "file": "package-lock.json",
-        "hash": "8228572577456809575"
+        "hash": "2174304104858684197"
       },
       {
         "file": "package.json",
-        "hash": "5530034997527406440"
+        "hash": "15574384195836054583"
+      },
+      {
+        "file": "projects/gpeel/validators/.eslintrc.json",
+        "hash": "3000944401409037308"
+      },
+      {
+        "file": "projects/gpeel/validators/README.md",
+        "hash": "6960953883353654583"
+      },
+      {
+        "file": "projects/gpeel/validators/ng-package.json",
+        "hash": "10948820641913284873"
+      },
+      {
+        "file": "projects/gpeel/validators/package.json",
+        "hash": "4089394802354211747"
+      },
+      {
+        "file": "projects/gpeel/validators/src/lib/debug-form/debug-form.component.ts",
+        "hash": "13804485253014087500"
+      },
+      {
+        "file": "projects/gpeel/validators/src/lib/debug-form/debug-input-field.component.ts",
+        "hash": "8212661614851993847"
+      },
+      {
+        "file": "projects/gpeel/validators/src/lib/error-messages/error-msg-api.ts",
+        "hash": "17078598238211997631"
+      },
+      {
+        "file": "projects/gpeel/validators/src/lib/error-messages/my-control-options.directive.ts",
+        "hash": "4484601234070317102"
+      },
+      {
+        "file": "projects/gpeel/validators/src/lib/error-messages/my-error-message.component.ts",
+        "hash": "9830643756976950867"
+      },
+      {
+        "file": "projects/gpeel/validators/src/lib/error-messages/my-error.directive.ts",
+        "hash": "267956777951171206"
+      },
+      {
+        "file": "projects/gpeel/validators/src/lib/index.ts",
+        "hash": "7848001644536309474"
+      },
+      {
+        "file": "projects/gpeel/validators/src/lib/my-validators.config.ts",
+        "hash": "12505169624960965623"
+      },
+      {
+        "file": "projects/gpeel/validators/src/lib/my-validators.module.ts",
+        "hash": "15591509222181151799"
+      },
+      {
+        "file": "projects/gpeel/validators/src/lib/pluggable-api/alert/alert-api.ts",
+        "hash": "4927060942939748934"
+      },
+      {
+        "file": "projects/gpeel/validators/src/lib/pluggable-api/alert/default-alert.service.ts",
+        "hash": "7423265151184287685"
+      },
+      {
+        "file": "projects/gpeel/validators/src/lib/pluggable-api/messages/default-messages.service.ts",
+        "hash": "14420774924660516679"
+      },
+      {
+        "file": "projects/gpeel/validators/src/lib/pluggable-api/messages/messages-service-api.ts",
+        "hash": "1829034808815021296"
+      },
+      {
+        "file": "projects/gpeel/validators/src/lib/pluggable-api/validators/default-validators.service.ts",
+        "hash": "9033805014602954982"
+      },
+      {
+        "file": "projects/gpeel/validators/src/lib/pluggable-api/validators/validators-service-api.ts",
+        "hash": "17132774532452947811"
+      },
+      {
+        "file": "projects/gpeel/validators/src/lib/submit-button/my-submit-if-valid-and-dirty.directive.ts",
+        "hash": "9695639875123068827"
+      },
+      {
+        "file": "projects/gpeel/validators/src/lib/submit-button/my-submit-if-valid.directive.ts",
+        "hash": "2142498905361870954"
+      },
+      {
+        "file": "projects/gpeel/validators/src/lib/submit-button/submit-if-abstract.directive.ts",
+        "hash": "13658909153790951720"
+      },
+      {
+        "file": "projects/gpeel/validators/src/lib/validators/solution-1-simplest/my-validators-directive.ts",
+        "hash": "5186627212562069103"
+      },
+      {
+        "file": "projects/gpeel/validators/src/lib/validators/solution-1-simplest/my-validators.ts",
+        "hash": "6836830440242499805"
+      },
+      {
+        "file": "projects/gpeel/validators/src/lib/validators/solution-1-simplest/readme.md",
+        "hash": "5613497824046397108"
+      },
+      {
+        "file": "projects/gpeel/validators/src/public-api.ts",
+        "hash": "14428353282588746736"
+      },
+      {
+        "file": "projects/gpeel/validators/tsconfig.lib.json",
+        "hash": "11617815499725119306"
+      },
+      {
+        "file": "projects/gpeel/validators/tsconfig.lib.prod.json",
+        "hash": "6958467553555132988"
+      },
+      {
+        "file": "projects/gpeel/validators/tsconfig.spec.json",
+        "hash": "2903595533919844908"
+      },
+      {
+        "file": "projects/reactive0-simplest/.eslintrc.json",
+        "hash": "18150697129470418428"
+      },
+      {
+        "file": "projects/reactive0-simplest/src/app/app.component.css",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "projects/reactive0-simplest/src/app/app.component.html",
+        "hash": "11358065693346708359"
+      },
+      {
+        "file": "projects/reactive0-simplest/src/app/app.component.spec.ts",
+        "hash": "5262972578559734204"
+      },
+      {
+        "file": "projects/reactive0-simplest/src/app/app.component.ts",
+        "hash": "11672169204911927550"
+      },
+      {
+        "file": "projects/reactive0-simplest/src/app/app.config.ts",
+        "hash": "5548986198782384011"
+      },
+      {
+        "file": "projects/reactive0-simplest/src/app/app.routes.ts",
+        "hash": "809736233805555256"
+      },
+      {
+        "file": "projects/reactive0-simplest/src/assets/.gitkeep",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "projects/reactive0-simplest/src/favicon.ico",
+        "hash": "3988961587069885523"
+      },
+      {
+        "file": "projects/reactive0-simplest/src/index.html",
+        "hash": "12888310136792197307"
+      },
+      {
+        "file": "projects/reactive0-simplest/src/main.ts",
+        "hash": "4169901790405087765"
+      },
+      {
+        "file": "projects/reactive0-simplest/src/styles.css",
+        "hash": "2917954890128038984"
+      },
+      {
+        "file": "projects/reactive0-simplest/tsconfig.app.json",
+        "hash": "5927361027902362554"
+      },
+      {
+        "file": "projects/reactive0-simplest/tsconfig.spec.json",
+        "hash": "13338856497352866793"
+      },
+      {
+        "file": "projects/reactive1-flexible-ui/.eslintrc.json",
+        "hash": "18150697129470418428"
+      },
+      {
+        "file": "projects/reactive1-flexible-ui/src/app/app.component.css",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "projects/reactive1-flexible-ui/src/app/app.component.html",
+        "hash": "11358065693346708359"
+      },
+      {
+        "file": "projects/reactive1-flexible-ui/src/app/app.component.spec.ts",
+        "hash": "1283130218392560727"
+      },
+      {
+        "file": "projects/reactive1-flexible-ui/src/app/app.component.ts",
+        "hash": "7388415264689376476"
+      },
+      {
+        "file": "projects/reactive1-flexible-ui/src/app/app.config.ts",
+        "hash": "5548986198782384011"
+      },
+      {
+        "file": "projects/reactive1-flexible-ui/src/app/app.routes.ts",
+        "hash": "809736233805555256"
+      },
+      {
+        "file": "projects/reactive1-flexible-ui/src/assets/.gitkeep",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "projects/reactive1-flexible-ui/src/favicon.ico",
+        "hash": "3988961587069885523"
+      },
+      {
+        "file": "projects/reactive1-flexible-ui/src/index.html",
+        "hash": "13349734731616882189"
+      },
+      {
+        "file": "projects/reactive1-flexible-ui/src/main.ts",
+        "hash": "4169901790405087765"
+      },
+      {
+        "file": "projects/reactive1-flexible-ui/src/styles.css",
+        "hash": "2917954890128038984"
+      },
+      {
+        "file": "projects/reactive1-flexible-ui/tsconfig.app.json",
+        "hash": "5927361027902362554"
+      },
+      {
+        "file": "projects/reactive1-flexible-ui/tsconfig.spec.json",
+        "hash": "13338856497352866793"
+      },
+      {
+        "file": "projects/reactive2-example-with-all-input-types/.eslintrc.json",
+        "hash": "18150697129470418428"
+      },
+      {
+        "file": "projects/reactive2-example-with-all-input-types/src/app/app.component.css",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "projects/reactive2-example-with-all-input-types/src/app/app.component.html",
+        "hash": "11358065693346708359"
+      },
+      {
+        "file": "projects/reactive2-example-with-all-input-types/src/app/app.component.spec.ts",
+        "hash": "10092316184414769444"
+      },
+      {
+        "file": "projects/reactive2-example-with-all-input-types/src/app/app.component.ts",
+        "hash": "10456959830476303610"
+      },
+      {
+        "file": "projects/reactive2-example-with-all-input-types/src/app/app.config.ts",
+        "hash": "5548986198782384011"
+      },
+      {
+        "file": "projects/reactive2-example-with-all-input-types/src/app/app.routes.ts",
+        "hash": "809736233805555256"
+      },
+      {
+        "file": "projects/reactive2-example-with-all-input-types/src/assets/.gitkeep",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "projects/reactive2-example-with-all-input-types/src/favicon.ico",
+        "hash": "3988961587069885523"
+      },
+      {
+        "file": "projects/reactive2-example-with-all-input-types/src/index.html",
+        "hash": "18093006843118585542"
+      },
+      {
+        "file": "projects/reactive2-example-with-all-input-types/src/main.ts",
+        "hash": "4169901790405087765"
+      },
+      {
+        "file": "projects/reactive2-example-with-all-input-types/src/styles.css",
+        "hash": "2917954890128038984"
+      },
+      {
+        "file": "projects/reactive2-example-with-all-input-types/tsconfig.app.json",
+        "hash": "5927361027902362554"
+      },
+      {
+        "file": "projects/reactive2-example-with-all-input-types/tsconfig.spec.json",
+        "hash": "13338856497352866793"
+      },
+      {
+        "file": "projects/reactive3-flexible-validators/.eslintrc.json",
+        "hash": "18150697129470418428"
+      },
+      {
+        "file": "projects/reactive3-flexible-validators/src/app/app.component.css",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "projects/reactive3-flexible-validators/src/app/app.component.html",
+        "hash": "11358065693346708359"
+      },
+      {
+        "file": "projects/reactive3-flexible-validators/src/app/app.component.spec.ts",
+        "hash": "12440727026592630156"
+      },
+      {
+        "file": "projects/reactive3-flexible-validators/src/app/app.component.ts",
+        "hash": "12010470582343333983"
+      },
+      {
+        "file": "projects/reactive3-flexible-validators/src/app/app.config.ts",
+        "hash": "5548986198782384011"
+      },
+      {
+        "file": "projects/reactive3-flexible-validators/src/app/app.routes.ts",
+        "hash": "809736233805555256"
+      },
+      {
+        "file": "projects/reactive3-flexible-validators/src/assets/.gitkeep",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "projects/reactive3-flexible-validators/src/favicon.ico",
+        "hash": "3988961587069885523"
+      },
+      {
+        "file": "projects/reactive3-flexible-validators/src/index.html",
+        "hash": "3670733836818874967"
+      },
+      {
+        "file": "projects/reactive3-flexible-validators/src/main.ts",
+        "hash": "4169901790405087765"
+      },
+      {
+        "file": "projects/reactive3-flexible-validators/src/styles.css",
+        "hash": "2917954890128038984"
+      },
+      {
+        "file": "projects/reactive3-flexible-validators/tsconfig.app.json",
+        "hash": "5927361027902362554"
+      },
+      {
+        "file": "projects/reactive3-flexible-validators/tsconfig.spec.json",
+        "hash": "13338856497352866793"
+      },
+      {
+        "file": "projects/reactive4-i18n-transloco-scss/.eslintrc.json",
+        "hash": "18150697129470418428"
+      },
+      {
+        "file": "projects/reactive4-i18n-transloco-scss/src/app/app.component.html",
+        "hash": "11358065693346708359"
+      },
+      {
+        "file": "projects/reactive4-i18n-transloco-scss/src/app/app.component.scss",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "projects/reactive4-i18n-transloco-scss/src/app/app.component.spec.ts",
+        "hash": "3506784740444790425"
+      },
+      {
+        "file": "projects/reactive4-i18n-transloco-scss/src/app/app.component.ts",
+        "hash": "15385414438503360877"
+      },
+      {
+        "file": "projects/reactive4-i18n-transloco-scss/src/app/app.config.ts",
+        "hash": "5548986198782384011"
+      },
+      {
+        "file": "projects/reactive4-i18n-transloco-scss/src/app/app.routes.ts",
+        "hash": "809736233805555256"
+      },
+      {
+        "file": "projects/reactive4-i18n-transloco-scss/src/assets/.gitkeep",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "projects/reactive4-i18n-transloco-scss/src/favicon.ico",
+        "hash": "3988961587069885523"
+      },
+      {
+        "file": "projects/reactive4-i18n-transloco-scss/src/index.html",
+        "hash": "3427832643307241141"
+      },
+      {
+        "file": "projects/reactive4-i18n-transloco-scss/src/main.ts",
+        "hash": "4169901790405087765"
+      },
+      {
+        "file": "projects/reactive4-i18n-transloco-scss/src/styles.scss",
+        "hash": "2917954890128038984"
+      },
+      {
+        "file": "projects/reactive4-i18n-transloco-scss/tsconfig.app.json",
+        "hash": "5927361027902362554"
+      },
+      {
+        "file": "projects/reactive4-i18n-transloco-scss/tsconfig.spec.json",
+        "hash": "13338856497352866793"
+      },
+      {
+        "file": "projects/reactive5-template-if-you-really-want/.eslintrc.json",
+        "hash": "18150697129470418428"
+      },
+      {
+        "file": "projects/reactive5-template-if-you-really-want/src/app/app.component.css",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "projects/reactive5-template-if-you-really-want/src/app/app.component.html",
+        "hash": "11358065693346708359"
+      },
+      {
+        "file": "projects/reactive5-template-if-you-really-want/src/app/app.component.spec.ts",
+        "hash": "17023231201448083652"
+      },
+      {
+        "file": "projects/reactive5-template-if-you-really-want/src/app/app.component.ts",
+        "hash": "10559282727700342822"
+      },
+      {
+        "file": "projects/reactive5-template-if-you-really-want/src/app/app.config.ts",
+        "hash": "5548986198782384011"
+      },
+      {
+        "file": "projects/reactive5-template-if-you-really-want/src/app/app.routes.ts",
+        "hash": "809736233805555256"
+      },
+      {
+        "file": "projects/reactive5-template-if-you-really-want/src/assets/.gitkeep",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "projects/reactive5-template-if-you-really-want/src/favicon.ico",
+        "hash": "3988961587069885523"
+      },
+      {
+        "file": "projects/reactive5-template-if-you-really-want/src/index.html",
+        "hash": "5513772683451166063"
+      },
+      {
+        "file": "projects/reactive5-template-if-you-really-want/src/main.ts",
+        "hash": "4169901790405087765"
+      },
+      {
+        "file": "projects/reactive5-template-if-you-really-want/src/styles.css",
+        "hash": "2917954890128038984"
+      },
+      {
+        "file": "projects/reactive5-template-if-you-really-want/tsconfig.app.json",
+        "hash": "5927361027902362554"
+      },
+      {
+        "file": "projects/reactive5-template-if-you-really-want/tsconfig.spec.json",
+        "hash": "13338856497352866793"
       },
       {
         "file": "src/app/app.component.css",
@@ -148,7 +612,7 @@
       },
       {
         "file": "tsconfig.json",
-        "hash": "3343339550490537441"
+        "hash": "13385388042844821139"
       },
       {
         "file": "tsconfig.spec.json",
