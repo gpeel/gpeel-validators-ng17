@@ -1,13 +1,17 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import {CommonModule} from '@angular/common';
+import {Component} from '@angular/core';
+import {ReactiveUiComponent} from './reactive-flexible-ui/reactive-ui.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  imports : [CommonModule, ReactiveUiComponent],
+  template: `
+
+    <reactive-ui></reactive-ui>
+
+  `
 })
 export class AppComponent {
-  title = 'reactive1-flexible-ui';
+
 }
