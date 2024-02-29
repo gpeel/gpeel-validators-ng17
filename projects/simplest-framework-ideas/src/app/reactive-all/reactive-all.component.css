@@ -1,0 +1,14 @@
+
+.ng-invalid.ng-dirty, .ng-invalid.ng-touched {
+    border-color: red;
+}
+
+label:not([class*="notbold"]) {
+    font-weight: bold;
+}
+
+.my-error {
+    font-weight: bold;
+    color: red;
+    font-size: 12px;
+}

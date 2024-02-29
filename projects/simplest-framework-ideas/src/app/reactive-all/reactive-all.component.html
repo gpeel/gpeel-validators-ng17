@@ -1,0 +1,90 @@
+<div class="container">
+  <h2>User Form</h2>
+  <ng-content></ng-content>
+
+  <form (ngSubmit)="onSubmit()" [formGroup]="form" autocomplete="off" spellcheck="false">
+
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input class="form-control" formControlName="name" id="name" monInput="toto" errorMsg>
+    </div>
+    <error-msg [control]="form.get('name')!"></error-msg>
+
+    <div class="form-check form-group mt-3 mb-3">
+      <input class="form-check-input"
+             formControlName="emailOffers"
+             id="emailOffers"
+             errorMsg
+             type="checkbox">
+      <label class="form-check-label" for="emailOffers"> Email Special Offers </label>
+    </div>
+    <error-msg [control]="form.get('emailOffers')!"></error-msg>
+
+    <div class="form-group">
+      <label class="no-margin-bottom">User Interface Style Radio</label>
+      <div *ngFor="let interfaceStyle of InterfaceStyleEnum | keyvalue" class="form-check">
+        <input [value]="interfaceStyle.value"
+               class="form-check-input"
+               formControlName="interfaceStyle" id="{{'interfaceStyle_'+ interfaceStyle.value}}"
+               name="interfaceStyle"
+               errorMsg
+               type="radio">
+        <label class="form-check-label notbold" for="{{'interfaceStyle_'+ interfaceStyle.value}}">
+          {{interfaceStyle.value}}
+        </label>
+      </div>
+    </div>
+    <error-msg [control]="form.get('interfaceStyle')!"></error-msg>
+
+
+    <div class="form-group mt-3">
+      <label for="subscriptionType">Subscription Type</label>
+      <select class="form-control"
+              errorMsg
+              formControlName="subscriptionType"
+              id="subscriptionType">
+        <option>Monthly</option>
+        <option>Annual</option>
+        <option>Lifetime</option>
+      </select>
+    </div>
+    <error-msg [control]="form.get('subscriptionType')!"></error-msg>
+
+
+    <div class="form-group mt-3">
+      <label for="notes">Notes</label>
+      <textarea class="form-control" formControlName="notes"
+                id="notes"
+                errorMsg
+                rows="3"></textarea>
+    </div>
+    <error-msg [control]="form.get('notes')!"></error-msg>
+
+    <div class="m-3 mt-5">
+      <button class="btn btn-primary">Send</button>
+      <!--      (mySubmitIfValidAndDirty)  stopPropagation and preventDefault for the button -->
+      <!--      so no need to define the type="button" to prevent submitting the form-->
+      <button (mySubmitIfValidAndDirty)="onSendWithDirtyfication()" class="btn btn-info">Send with dirtyfication
+      </button>
+    </div>
+    <!--    for those 2 buttons : you HAVE to add type="button" to prevent the (submit) event to be emitted -->
+    <!--    otherwise you will get onSubmit() method executed as well-->
+    <div class="m-3">
+      <button (click)="onCancel()" class="btn btn-warning" type="button">Cancel
+      </button>
+      <!--      Clicking the reset button restores the form to its original state-->
+      <!--      But with Angular the original is an empty cleared form, so that's NOT what we want most of the time-->
+      <!--      Here we edit and the settings of data in the FormGroup is detected by HTML as an after move-->
+      <button class="btn btn-secondary" type="reset">HTML-Reset
+      </button>
+      <button (click)="onFillaCorrectForm()" class="btn btn-dark" type="button">Fill a correct Form</button>
+    </div>
+
+  </form>
+
+  <debug-form [form]="form" class="m-2"></debug-form>
+  <debug-input-field [group]="form" prop="name"></debug-input-field>
+  <!--  <debug-input-field [group]="form" prop="subscriptionType"></debug-input-field>-->
+  <debug-input-field [group]="form" prop="notes"></debug-input-field>
+
+</div>
