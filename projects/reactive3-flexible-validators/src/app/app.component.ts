@@ -1,13 +1,17 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import {CommonModule} from '@angular/common';
+import {Component} from '@angular/core';
+import {ReactiveAllComponent} from './reactive-all/reactive-all.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  imports : [CommonModule,  ReactiveAllComponent],
+  template: `
+
+    <reactive-all></reactive-all>
+
+  `
 })
 export class AppComponent {
-  title = 'reactive3-flexible-validators';
+
 }
