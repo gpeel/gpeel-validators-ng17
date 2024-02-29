@@ -31,4 +31,6 @@ export {DefaultValidatorsService} from './pluggable-api/validators/default-valid
 export {DefaultMessagesService} from './pluggable-api/messages/default-messages.service';
 export {DefaultAlertService} from './pluggable-api/alert/default-alert.service';
 
+export {provideMyValidators} from './my-validators.config';
+
 export * from './my-validators.module';

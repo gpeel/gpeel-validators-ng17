@@ -1,13 +1,20 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import {Component} from '@angular/core';
+import {MyValidatorsModule} from '@gpeel/validators';
+import {ReactiveSimplestComponent} from './reactive-simplest/reactive-simplest.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  imports: [
+    MyValidatorsModule,
+    ReactiveSimplestComponent,
+  ],
+  template: `
+
+    <reactive-simplest></reactive-simplest>
+
+  `
 })
 export class AppComponent {
-  title = 'reactive0-simplest';
+
 }
