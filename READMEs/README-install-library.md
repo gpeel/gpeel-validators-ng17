@@ -73,4 +73,8 @@ This creates a .npmrc file in your c/users/gauthier with the credit to log in ht
 
 ## my logging lib
 
-      npm i @gpeel/plog
+      npm i @gpeel/plog@17  @gpeel/perftools@17
+## bump
+
+    "bump-cli": "^1.1.3",
+    npm i  cpx@1.5.0 bump-cli@1.1.3

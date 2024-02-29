@@ -3,11 +3,24 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve -o --port=5111",
+    "start:0": "ng serve -o --port=5000 reactive0-simplest",
+    "start:1": "ng serve -o --port=5100 reactive1-flexible-ui",
+    "start:2": "ng serve -o --port=5200 reactive2-example-with-all-input-types",
+    "start:3": "ng serve -o --port=5300 reactive3-flexible-validators",
+    "start:4": "ng serve -o --port=5400 reactive4-i18n-transloco-scss",
+    "start:5": "ng serve -o --port=5500 reactive5-template-if-you-really-want",
+    "start:6": "ng serve -o --port=5600 simplest-framework-ideas",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "lint": "ng lint"
+    "lint": "ng lint",
+    "bump_1_patch": "bump projects/gpeel/my-validators/package.json",
+    "bump_1_major": "bump --major projects/gpeel/my-validators/package.json",
+    "bump_1_minor": "bump --minor projects/gpeel/my-validators/package.json",
+    "build-my-validators-lib_2": "ng build @gpeel/my-validators",
+    "cpSources_3": "cpx -v \"./projects/gpeel/my-validators/src/**/*.*\"   ./dist/gpeel/my-validators/src",
+    "publish_4": "cd ./dist/gpeel/my-validators && npm publish --access public "
   },
   "private": true,
   "dependencies": {
@@ -19,12 +32,15 @@
     "@angular/platform-browser": "^17.2.0",
     "@angular/platform-browser-dynamic": "^17.2.0",
     "@angular/router": "^17.2.0",
-    "cpx": "^1.5.0",
+    "@gpeel/perftools": "^17.0.1",
+    "@gpeel/plog": "^17.1.1",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.3"
   },
   "devDependencies": {
+    "bump-cli": "^1.1.3",
+    "cpx": "^1.5.0",
     "@angular-devkit/build-angular": "^17.2.2",
     "@angular-eslint/builder": "17.2.1",
     "@angular-eslint/eslint-plugin": "17.2.1",
