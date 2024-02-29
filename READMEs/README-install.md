@@ -1,4 +1,4 @@
-# My Usual setting for Angular 16
+# My Usual setting for Angular 17
 
 Here is a description of what was added to this project.
 
@@ -32,6 +32,6 @@ to install because missing by default and used but my rules:
 
 ## bump
 
-    npm install -g bump-cli
+    npm install -g bump-cli@1.1.3
 
     npm i cpx@1.5.0
