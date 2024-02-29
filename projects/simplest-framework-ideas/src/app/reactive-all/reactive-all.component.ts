@@ -11,6 +11,9 @@ import {
 } from '@angular/forms';
 // import {makeDirty} from '@gpeel/my-validators';
 import {Plog} from '@gpeel/plog';
+import {MyValidatorsModule} from '@gpeel/validators';
+import {ErrorMessageComponent} from '../my-validators/error-message.component';
+import {ErrorDirective} from '../my-validators/error.directive';
 import {MyValidators} from '../my-validators/my-validators';
 import {InterfaceStyleEnum, UserData} from './user-data';
 
@@ -27,7 +30,13 @@ export function makeDirty(fg: FormGroup | FormArray | NgForm): void {
 @Component({
   selector: 'reactive-all',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule],
+  imports: [
+    CommonModule,
+    ReactiveFormsModule,
+    ErrorMessageComponent,
+    ErrorDirective,
+    MyValidatorsModule
+  ],
   templateUrl: 'reactive-all.component.html',
   styleUrls: ['reactive-all.component.css']
 })

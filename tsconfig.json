@@ -4,7 +4,7 @@
   "compilerOptions": {
     "paths": {
       "@gpeel/validators": [
-        "projects/gpeel/validators/src/public-api.ts"
+        "./projects/gpeel/validators/src/public-api.ts"
       ]
     },
     "outDir": "./dist/out-tsc",
