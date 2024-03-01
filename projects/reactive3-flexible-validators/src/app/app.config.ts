@@ -8,14 +8,19 @@ import {TypicalValidatorsService} from './validators/typical-validators.service'
 export const appConfig: ApplicationConfig = {
   providers: [
     providePlog(plogConfig),
+    // provideMyValidators((control: AbstractControl) => control.touched),
     provideMyValidators(),
     // TypicalMessagesService,
     TypicalValidatorsService,
     TypicalStandaloneValidatorsService,
+
+    // DECLARING HERE the custom Tokens MY_ALERT_SERVICE_API (and the others) is NOT taken into account be Angular.
+    // I succeeded when declaring in AppComponent @Compoennt.providers property.
+    // see ./app/AppComponent
+    //
     // AlertWithSimpleLogService,
     // Providing MY_ALERT_SERVICE_API is useful only for the submit directive feature (mySubmitIfValidAndDirty)="onSend()"
     // to show popup
-    // makeEnvironmentProviders([
     // {
     //   provide: MY_ALERT_SERVICE_API,
     //   useClass: AlertWithSimpleLogService
@@ -43,7 +48,7 @@ export const appConfig: ApplicationConfig = {
     //    * So you must do part of the job behind the button handler which submit the form.
     //    * The rest of the job is done by this function with useValue: (control: AbstractControl) => control.touched
     //    */
-    // }])
+    // }
 
   ]
 };

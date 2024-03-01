@@ -1,5 +1,5 @@
 import {EnvironmentProviders, makeEnvironmentProviders} from '@angular/core';
-import {MY_VALIDATORS_PROVIDERS} from './my-validators.module';
+import {MY_VALIDATORS_DEFAULT_PROVIDERS} from './my-validators.module';
 import {MY_SHOW_ERROR_MSG_FUNCTION_API, ShowFunction} from './pluggable-api/messages/messages-service-api';
 
 /**
@@ -10,7 +10,7 @@ import {MY_SHOW_ERROR_MSG_FUNCTION_API, ShowFunction} from './pluggable-api/mess
 
 export function provideMyValidators(showFunction?: ShowFunction): EnvironmentProviders {
 
-  const providers = MY_VALIDATORS_PROVIDERS;
+  const providers = MY_VALIDATORS_DEFAULT_PROVIDERS;
 
   if (showFunction) {
     providers.push(

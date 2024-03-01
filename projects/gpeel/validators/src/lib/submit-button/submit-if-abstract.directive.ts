@@ -12,9 +12,9 @@ export function makeDirty(fg: FormGroup | FormArray | NgForm): void {
       // @ts-ignore
       const ac: AbstractControl = fg.controls[fieldName];
       ac.markAsDirty();
-      ac.markAsTouched(); // necessary for LABEL when using material
+      ac.markAsTouched(); // necessary for LABEL-clicks when using material
       ac.updateValueAndValidity(); // necessary to provoke a valueChanges()
-      // => so the validators are recomputed => so the widget <pee-error-msg> is refreshed
+      // => so the validators are recomputed => so the widget <error-msg> is refreshed
       if ((ac instanceof FormGroup) || (ac instanceof FormArray)) {
         makeDirty(ac);
       }

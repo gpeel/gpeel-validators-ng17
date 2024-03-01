@@ -27,8 +27,7 @@ import {
   MyRequiredValidator
 } from './validators/solution-1-simplest/my-validators-directive';
 
-
-export const MY_VALIDATORS_PROVIDERS = [
+export const MY_VALIDATORS_DEFAULT_PROVIDERS = [
   DefaultAlertService,
   DefaultValidatorsService,
   DefaultMessagesService,
@@ -86,7 +85,7 @@ export const MY_VALIDATORS_PROVIDERS = [
     MyCheckboxRequiredValidator,
   ],
   // entryComponents: [MyErrorMessageComponent],
-  providers: MY_VALIDATORS_PROVIDERS,
+  providers: MY_VALIDATORS_DEFAULT_PROVIDERS,
 })
 export class MyValidatorsModule {
   static forRoot(showFunction: ShowFunction): ModuleWithProviders<MyValidatorsModule> {
