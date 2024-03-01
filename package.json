@@ -15,12 +15,12 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "lint": "ng lint",
-    "bump_1_patch": "bump projects/gpeel/my-validators/package.json",
-    "bump_1_major": "bump --major projects/gpeel/my-validators/package.json",
-    "bump_1_minor": "bump --minor projects/gpeel/my-validators/package.json",
-    "build-my-validators-lib_2": "ng build @gpeel/my-validators",
-    "cpSources_3": "cpx -v \"./projects/gpeel/my-validators/src/**/*.*\"   ./dist/gpeel/my-validators/src",
-    "publish_4": "cd ./dist/gpeel/my-validators && npm publish --access public "
+    "bump_1_patch": "bump projects/gpeel/validators/package.json",
+    "bump_1_major": "bump --major projects/gpeel/validators/package.json",
+    "bump_1_minor": "bump --minor projects/gpeel/validators/package.json",
+    "build-my-validators-lib_2": "ng build @gpeel/validators",
+    "cpSources_3": "cpx -v \"./projects/gpeel/validators/src/**/*.*\"   ./dist/gpeel/validators/src",
+    "publish_4": "cd ./dist/gpeel/validators && npm publish --access public "
   },
   "private": true,
   "dependencies": {
