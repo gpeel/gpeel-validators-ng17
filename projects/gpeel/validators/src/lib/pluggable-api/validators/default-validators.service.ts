@@ -1,7 +1,7 @@
 import {Inject, Injectable, Optional} from '@angular/core';
 import {AbstractControl, ValidationErrors, ValidatorFn, Validators} from '@angular/forms';
-import {MY_MESSAGES_SERVICE_API, MyMessagesServiceInterface} from '../messages/messages-service-api';
-import {MyValidatorsServiceInterface} from './validators-service-api';
+import {MY_MESSAGES_SERVICE_API, MyMessagesServiceAbstract} from '../messages/messages-service-api';
+import {MyValidatorsServiceAbstract} from './validators-service-api';
 
 /**
  * This DefaultValidatorsService could be used to code a full custom  MyValidatorsServiceInterface.
@@ -27,9 +27,9 @@ import {MyValidatorsServiceInterface} from './validators-service-api';
  * to keep the 'this' being the instance of DefaultValidatorsService.
  */
 @Injectable()
-export class DefaultValidatorsService implements MyValidatorsServiceInterface {
+export class DefaultValidatorsService implements MyValidatorsServiceAbstract {
 
-  constructor(@Optional() @Inject(MY_MESSAGES_SERVICE_API) private myMessagesService: MyMessagesServiceInterface) {
+  constructor(@Optional() @Inject(MY_MESSAGES_SERVICE_API) private myMessagesService: MyMessagesServiceAbstract) {
   }
 
   email = (control: AbstractControl): ValidationErrors | null => {

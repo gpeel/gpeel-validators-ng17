@@ -18,11 +18,11 @@ export * from './validators/solution-1-simplest/my-validators-directive';
 
 // with more flexible (pluggable) services/interfaces
 export {
-  MyValidatorsServiceInterface, MY_VALIDATORS_SERVICE_API
+  MyValidatorsServiceAbstract, MY_VALIDATORS_SERVICE_API
 } from './pluggable-api/validators/validators-service-api';
-export {MY_ALERT_SERVICE_API, MyAlertServiceInterface} from './pluggable-api/alert/alert-api';
+export {MY_ALERT_SERVICE_API, MyAlertServiceAbstract} from './pluggable-api/alert/alert-api';
 export {
-  MyMessagesServiceInterface, MY_MESSAGES_SERVICE_API,
+  MyMessagesServiceAbstract, MY_MESSAGES_SERVICE_API,
   DEFAULT_SHOW_ERROR_MSG_FUNCTION, MY_SHOW_ERROR_MSG_FUNCTION_API
 } from './pluggable-api/messages/messages-service-api';
 

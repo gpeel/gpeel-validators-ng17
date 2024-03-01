@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {ErrorMsgMap, MyMessagesServiceInterface} from '@gpeel/validators';
+import {ErrorMsgMap, MyMessagesServiceAbstract} from '@gpeel/validators';
 
 const FR_MESSAGES: ErrorMsgMap = {
 
@@ -43,7 +43,7 @@ const EN_MESSAGES: ErrorMsgMap = {
  * The first GOOD feattue is that the messages are not hard-coded in the validators. but here, easily changeable.
  */
 @Injectable()
-export class TypicalMessagesService implements MyMessagesServiceInterface {
+export class TypicalMessagesService implements MyMessagesServiceAbstract {
 
   getValidationMessageFor(key: string, errors?: ErrorMsgMap): string {
     const m = FR_MESSAGES[key];

@@ -1,8 +1,7 @@
 import {Injectable} from '@angular/core';
 // noinspection ES6PreferShortImport
 import {ErrorMsgMap} from '../../error-messages/error-msg-api';
-import {MyMessagesServiceInterface} from './messages-service-api';
-
+import {MyMessagesServiceAbstract} from './messages-service-api';
 
 export const I18N_MESSAGES: ErrorMsgMap = {
 
@@ -23,7 +22,7 @@ export const I18N_MESSAGES: ErrorMsgMap = {
 };
 
 @Injectable()
-export class DefaultMessagesService implements MyMessagesServiceInterface {
+export class DefaultMessagesService implements MyMessagesServiceAbstract {
 
   getValidationMessageFor(key: string, errors: ErrorMsgMap | null = null): string {
     const m = I18N_MESSAGES[key];

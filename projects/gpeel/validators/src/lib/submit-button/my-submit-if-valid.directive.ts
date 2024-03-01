@@ -1,7 +1,7 @@
 import {Directive, EventEmitter, Inject, Injector, Optional, Output} from '@angular/core';
 import {FormGroup} from '@angular/forms';
 import {Plog} from '@gpeel/plog';
-import {MY_ALERT_SERVICE_API, MyAlertServiceInterface} from '../pluggable-api/alert/alert-api';
+import {MY_ALERT_SERVICE_API, MyAlertServiceAbstract} from '../pluggable-api/alert/alert-api';
 import {SubmitIfAbstractDirective} from './submit-if-abstract.directive';
 
 // // usually AlertModule is in ./libs
@@ -29,7 +29,7 @@ export class MySubmitIfValidDirective extends SubmitIfAbstractDirective {
   @Output('mySubmitIfValid') valid = new EventEmitter<void>();
 
   constructor(injector: Injector,
-              @Optional() @Inject(MY_ALERT_SERVICE_API) private alertService: MyAlertServiceInterface) {
+              @Optional() @Inject(MY_ALERT_SERVICE_API) private alertService: MyAlertServiceAbstract) {
     super(injector);
   }
 

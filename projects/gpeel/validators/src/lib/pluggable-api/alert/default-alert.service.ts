@@ -1,8 +1,8 @@
 import {Injectable} from '@angular/core';
-import {MyAlertServiceInterface} from './alert-api';
+import {MyAlertServiceAbstract} from './alert-api';
 
 @Injectable()
-export class DefaultAlertService implements MyAlertServiceInterface {
+export class DefaultAlertService extends MyAlertServiceAbstract {
   public warn(msg: any): void {
     console.log('WARNNNNNNNNNNNNNNNNNNNNNNNNNNNNN', msg);
   }

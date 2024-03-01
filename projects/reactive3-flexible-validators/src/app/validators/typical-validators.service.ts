@@ -3,8 +3,8 @@ import {AbstractControl, ValidationErrors} from '@angular/forms';
 import {
   DefaultValidatorsService,
   MY_MESSAGES_SERVICE_API,
-  MyMessagesServiceInterface,
-  MyValidatorsServiceInterface
+  MyMessagesServiceAbstract,
+  MyValidatorsServiceAbstract
 } from '@gpeel/validators';
 
 /**
@@ -19,7 +19,7 @@ import {
  * to any i18n framework : ngx-translate or @ngneat/transloco See strategy 5 for an example.
  */
 @Injectable()
-export class TypicalValidatorsService extends DefaultValidatorsService implements MyValidatorsServiceInterface {
+export class TypicalValidatorsService extends DefaultValidatorsService implements MyValidatorsServiceAbstract {
 
   /**
    * You don't have to provide the I18nMessagesService, for validators methods here,
@@ -27,7 +27,7 @@ export class TypicalValidatorsService extends DefaultValidatorsService implement
    * BUT injection with the Token also works fine also (line in comment, with a provider for the token
    * MY_MESSAGES_SERVICE_API)
    */
-  constructor(@Inject(MY_MESSAGES_SERVICE_API) private fullMessagesService: MyMessagesServiceInterface) {
+  constructor(@Inject(MY_MESSAGES_SERVICE_API) private fullMessagesService: MyMessagesServiceAbstract) {
     // constructor(private  fullMessagesService: I18nMessagesService) {
     super(fullMessagesService);
   }

@@ -3,7 +3,7 @@
 
 import {Inject, Injectable} from '@angular/core';
 import {AbstractControl, ValidationErrors, ValidatorFn, Validators} from '@angular/forms';
-import {MY_MESSAGES_SERVICE_API, MyMessagesServiceInterface, MyValidatorsServiceInterface} from '@gpeel/validators';
+import {MY_MESSAGES_SERVICE_API, MyMessagesServiceAbstract, MyValidatorsServiceAbstract} from '@gpeel/validators';
 
 /**
  * ValidatorsService will be used to define ALL validators in a project.
@@ -12,10 +12,10 @@ import {MY_MESSAGES_SERVICE_API, MyMessagesServiceInterface, MyValidatorsService
  * Here is that example
  */
 @Injectable()
-export class TypicalStandaloneValidatorsService implements MyValidatorsServiceInterface {
+export class TypicalStandaloneValidatorsService implements MyValidatorsServiceAbstract {
 
   // constructor(private  myMessagesService: I18nMessagesService) {
-  constructor(@Inject(MY_MESSAGES_SERVICE_API) private myMessagesService: MyMessagesServiceInterface) {
+  constructor(@Inject(MY_MESSAGES_SERVICE_API) private myMessagesService: MyMessagesServiceAbstract) {
   }
 
   // Arrow-function required to use "this" ! by NG

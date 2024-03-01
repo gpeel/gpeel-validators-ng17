@@ -1,8 +1,8 @@
 import {Directive, EventEmitter, Inject, Injector, Optional, Output} from '@angular/core';
 import {FormGroup} from '@angular/forms';
 import {Plog} from '@gpeel/plog';
-import {MY_ALERT_SERVICE_API, MyAlertServiceInterface} from '../pluggable-api/alert/alert-api';
-import {MY_MESSAGES_SERVICE_API, MyMessagesServiceInterface} from '../pluggable-api/messages/messages-service-api';
+import {MY_ALERT_SERVICE_API, MyAlertServiceAbstract} from '../pluggable-api/alert/alert-api';
+import {MY_MESSAGES_SERVICE_API, MyMessagesServiceAbstract} from '../pluggable-api/messages/messages-service-api';
 import {SubmitIfAbstractDirective} from './submit-if-abstract.directive';
 
 /**
@@ -49,8 +49,8 @@ export class MySubmitIfValidAndDirtyDirective extends SubmitIfAbstractDirective 
   @Output('mySubmitIfValidAndDirty') valid = new EventEmitter<void>();
 
   constructor(injector: Injector,
-              @Optional() @Inject(MY_ALERT_SERVICE_API) private alertService: MyAlertServiceInterface,
-              @Optional() @Inject(MY_MESSAGES_SERVICE_API) private messageService: MyMessagesServiceInterface,
+              @Optional() @Inject(MY_ALERT_SERVICE_API) private alertService: MyAlertServiceAbstract,
+              @Optional() @Inject(MY_MESSAGES_SERVICE_API) private messageService: MyMessagesServiceAbstract,
   ) {
     super(injector);
   }
