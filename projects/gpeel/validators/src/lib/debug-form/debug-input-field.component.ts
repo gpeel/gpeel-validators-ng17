@@ -22,10 +22,10 @@ import {Plog} from '@gpeel/plog';
   template: `
     <pre style="font-size: 12px">
 
-      Field.{{prop}}.value = {{control.value | json}}
-      {{prop}}.blur={{control.touched}}
-      {{prop}}.dirty={{control.dirty}}
-      {{prop}}.errors = {{control.errors | json}}
+      Field.{{prop}}.value = {{control?.value | json}}
+      {{prop}}.blur={{control?.touched}}
+      {{prop}}.dirty={{control?.dirty}}
+      {{prop}}.errors = {{control?.errors | json}}
     </pre>
   `,
   styles : [`
@@ -48,7 +48,7 @@ export class DebugInputFieldComponent implements OnInit {
   get control() {
     if (!this._control) {
       const v = (this.group as NgForm).controls[this.prop];
-      // console.log('vvvvvvvvvvvvvvvvvv', v, this.prop, this.group, this.group.controls);
+      // console.log('vvvvvvvvvvvvvvvvvv', v, this.prop, this.group,'oo', (this.group as any).controls);
       return v;
     }
     return this._control;
