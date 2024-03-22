@@ -11,7 +11,11 @@ import {
 import {AbstractControl} from '@angular/forms';
 import {Plog} from '@gpeel/plog';
 import {debounceTime, merge, Subscription} from 'rxjs';
-import {MY_SHOW_ERROR_MSG_FUNCTION_API, ShowFunction} from '../pluggable-api/messages/messages-service-api';
+import {
+  DEFAULT_SHOW_ERROR_MSG_FUNCTION,
+  MY_SHOW_ERROR_MSG_FUNCTION_API,
+  ShowFunction
+} from '../pluggable-api/messages/messages-service-api';
 import {ErrorMsgFn, ErrorMsgMap} from './error-msg-api';
 
 /**
@@ -86,7 +90,8 @@ export class MyErrorMessageComponent implements OnDestroy, AfterViewInit {
   // ergonomics
 
   constructor(private cd: ChangeDetectorRef,
-              @Inject(MY_SHOW_ERROR_MSG_FUNCTION_API) public showFunctionGlobal: ShowFunction) {
+              @Inject(MY_SHOW_ERROR_MSG_FUNCTION_API)
+              public showFunctionGlobal: ShowFunction = DEFAULT_SHOW_ERROR_MSG_FUNCTION) {
     Plog.validationErrorMsgCreation('<pee-error-msg>');
     this.showErrorUsed = showFunctionGlobal;
   }
