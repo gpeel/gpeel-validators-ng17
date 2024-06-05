@@ -93,7 +93,7 @@ export class MyErrorMessageComponent implements OnDestroy, AfterViewInit {
   constructor(private cd: ChangeDetectorRef,
               @Inject(MY_SHOW_ERROR_MSG_FUNCTION_API) @Optional()
               public showFunctionGlobal: ShowFunction = DEFAULT_SHOW_ERROR_MSG_FUNCTION) {
-    Plog.validationErrorMsgCreation('<pee-error-msg>');
+    Plog.validationErrorMsgCreation('Component <my-error-msg> created');
     this.showErrorUsed = showFunctionGlobal;
   }
 
