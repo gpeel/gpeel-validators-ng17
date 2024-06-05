@@ -6,7 +6,8 @@ import {
   Component,
   Inject,
   Input,
-  OnDestroy
+  OnDestroy,
+  Optional
 } from '@angular/core';
 import {AbstractControl} from '@angular/forms';
 import {Plog} from '@gpeel/plog';
@@ -90,7 +91,7 @@ export class MyErrorMessageComponent implements OnDestroy, AfterViewInit {
   // ergonomics
 
   constructor(private cd: ChangeDetectorRef,
-              @Inject(MY_SHOW_ERROR_MSG_FUNCTION_API)
+              @Inject(MY_SHOW_ERROR_MSG_FUNCTION_API) @Optional()
               public showFunctionGlobal: ShowFunction = DEFAULT_SHOW_ERROR_MSG_FUNCTION) {
     Plog.validationErrorMsgCreation('<pee-error-msg>');
     this.showErrorUsed = showFunctionGlobal;
